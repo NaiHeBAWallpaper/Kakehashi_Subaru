@@ -44,7 +44,8 @@ const subtitleLocales = {
 	Chinese: 'zh-Hans',
 	TraditionalChinese: 'zh-Hant',
 	Japanese: 'ja',
-	Korean: 'ko'
+	Korean: 'ko',
+	Thai: 'th'
 };
 
 const CHARACTER = 'CH0309';
@@ -61,21 +62,22 @@ const AUDIO_DETAIL = [
                 "こうして誰か一人のために演奏するのは初めてで……。"
             ],
             English: [
-                "It feels... strangely refreshing.",
-                "This is the first time I've ever played for just one person..."
+                "It feels refreshing.",
+                "This is my first time playing for a solo audience..."
             ],
             Chinese: [
                 "不知为何，感觉很新鲜。",
                 "像这样只为某一个人演奏，还是第一次……"
             ],
             TraditionalChinese: [
-                "不知為何，感覺很新鮮。",
-                "像這樣只為某一個人演奏，還是第一次……"
+                "總覺得，有股新鮮的感覺。",
+                "像這樣為某個人演奏還是第一次……"
             ],
             Korean: [
-                "기묘하게 신선한 느낌이죠",
-                "내가 한 사람을 위해 처음 연주한 거야"
-            ]
+                "뭔가, 신선한 기분이에요.",
+                "이렇게 한 사람을 위해 연주하는 건 처음이라……"
+            ],
+            Thai: ["เป็นความรู้สึกที่แปลกใหม่ดีนะคะ","นี่เป็นครั้งแรกที่ฉัน เล่นดนตรีให้ใครคนหนึ่งฟังน่ะ..."]
         }
     },
     {
@@ -85,21 +87,22 @@ const AUDIO_DETAIL = [
                 "変じゃ、なかったですか……？"
             ],
             English: [
-                "How... was it?",
-                "It wasn't... strange, was it?"
+                "How was it?",
+                "Was it weird or anything...?"
             ],
             Chinese: [
                 "怎么样……？",
                 "没有觉得奇怪吧……？"
             ],
             TraditionalChinese: [
-                "怎麼樣……？",
-                "沒有覺得奇怪吧……？"
+                "感覺，怎麼樣呢？",
+                "應該，不奇怪吧……？"
             ],
             Korean: [
-                "어땠어?",
-                "이상한 건 아니었어?"
-            ]
+                "어떠, 셨을까요.",
+                "이상하지는, 않으셨나요……?"
+            ],
+            Thai: ["เป็นยังไง... บ้างคะ?","รู้สึกว่ามันแปลกหรือเปล่าคะ...?"]
         }
     },
     {
@@ -109,7 +112,7 @@ const AUDIO_DETAIL = [
                 "……ありがとうございます。"
             ],
             English: [
-                "Can I... um... take that as your honest opinion?",
+                "That... I can trust your words, right?",
                 "...Thank you."
             ],
             Chinese: [
@@ -117,13 +120,14 @@ const AUDIO_DETAIL = [
                 "……谢谢。"
             ],
             TraditionalChinese: [
-                "那個……我是說，我可以把這當作您的真心話吧？",
-                "……謝謝。"
+                "那是……那個……我可以，認為那是真心話嗎？",
+                "……謝謝你。"
             ],
             Korean: [
-                "솔직한 의견으로 받아들일 수 있을까요?",
-                "고마워요"
-            ]
+                "그건…… 진심, 이라고 받아들여도 되는 거죠?",
+                "……감사합니다."
+            ],
+            Thai: ["ฉันจะคิดว่า... นั่นมาจาก ใจจริงได้ใช่มั้ยคะ?","ขอบคุณค่ะ..."]
         }
     },
     {
@@ -133,7 +137,7 @@ const AUDIO_DETAIL = [
                 "今の私には、これくらいしかなくて……。"
             ],
             English: [
-                "Truth be told, I wish I could have done something else for you...",
+                "The thing is, I wish I could do more things...",
                 "But right now, this is about all I can do..."
             ],
             Chinese: [
@@ -141,13 +145,14 @@ const AUDIO_DETAIL = [
                 "只是现在的我，仅能做到这些而已……"
             ],
             TraditionalChinese: [
-                "其實，如果能為您做點別的什麼就好了……",
-                "只是現在的我，僅能做到這些而已……"
+                "其實，要是還能做點別的事情就好了……",
+                "現在的我，只能做到這些……"
             ],
             Korean: [
-                "솔직히 말해서, 내가 당신을 위해 다른 일을 할 수 있었으면 좋겠어요...",
-                "하지만 지금은 내가 할 수 있는 모든 것이..."
-            ]
+                "사실은, 다른 걸 더 할 수 있으면 좋았을 텐데……",
+                "지금 저는, 이 정도밖에 해 드릴 게……"
+            ],
+            Thai: ["ที่จริงฉันอยากทำอะไร ให้ได้มากกว่านี้แท้ๆ...","แต่ตอนนี้ฉัน ทำให้ได้แค่เท่านี้..."]
         }
     },
     {
@@ -157,21 +162,22 @@ const AUDIO_DETAIL = [
                 "「楽譜もたくさん買ったから」……？"
             ],
             English: [
-                "Huh? 'You want to hear me play again once I've practiced'...?",
-                "'Because you bought lots of sheet music'...?"
+                "What? You'd love to see me practice and perform for you again?",
+                "Since I bought so many music sheets...?"
             ],
             Chinese: [
                 "诶？“练习之后再让我听听”……？",
                 "“而且还买了很多乐谱”……？"
             ],
             TraditionalChinese: [
-                "誒？“練習之後再讓我聽聽”……？",
-                "“而且還買了很多樂譜”……？"
+                "咦？「希望練習之後能再讓我聽」……？",
+                "「因為買了很多樂譜」……？"
             ],
             Korean: [
-                "연습을 한 후에 다시 연주하는 걸 듣고 싶니?",
-                "'무엇 때문에 많은 음반을 샀지'?"
-            ]
+                "네? '또 연습해서 들려줬으면 좋겠다'고요……?",
+                "'악보도 많이 샀으니까'요……?"
+            ],
+            Thai: ["คะ? อยากให้ไปฝึกเพิ่ม แล้วมา เล่นให้ฟังอีกงั้นเหรอคะ...?","ไหนๆ ก็ซื้อโน้ตเพลงมาเยอะแล้ว งั้นเหรอคะ?"]
         }
     },
     {
@@ -182,21 +188,22 @@ const AUDIO_DETAIL = [
                 "また……その時になったら、考えさせてください。"
             ],
             English: [
-                "Th-That is...",
-                "Well... please let me think about it when the time comes."
+                "Th-That's...",
+                "I'll... think about it again later."
             ],
             Chinese: [
                 "那、那个……",
                 "等到……那时候，请再让我考虑一下吧。"
             ],
             TraditionalChinese: [
-                "那，那是……",
-                "等到……那時候，請再讓我考慮一下吧。"
+                "這，這個……",
+                "等到……那個時候，再讓我考慮一下吧。"
             ],
             Korean: [
-                "그, 그건……",
-                "시간이 되면 생각해보게"
-            ]
+                "그, 그건…….",
+                "다시…… 그때 가서 생각해 볼게요."
+            ],
+            Thai: ["ระ... เรื่องนั้น...","ไว้ถึง... ตอนนั้น ฉันค่อยคิดอีกครั้งดีกว่าค่ะ"]
         }
     }
 ];
@@ -308,7 +315,7 @@ function playVoiceline() {
 			track.play().catch(finish);
 
 			if (dialogBox) {
-				textbox.textContent = dialog[window.selectedLanguage][index];
+				textbox.textContent = getSubtitleText(dialog, window.selectedLanguage, index);
 				textbox.style.opacity = 1;
 			}
 		},
@@ -478,6 +485,16 @@ function setMouse(event) {
 	return { x: ax - canvas.width * positionX, y: ay - canvas.height * positionY };
 }
 
+function getSubtitleText(dialog, language, index) {
+	let text = dialog?.[language]?.[index];
+	if (text == null && language === 'Thai') {
+		language = 'English';
+		text = dialog?.[language]?.[index];
+	}
+	textbox.lang = subtitleLocales[language];
+	return text ?? "";
+}
+
 function updateSubtitleLanguage() {
 	let language = subtitleLanguagePreference;
 	if (language === 'auto') {
@@ -491,6 +508,8 @@ function updateSubtitleLanguage() {
 			language = 'Japanese';
 		} else if (primary === 'ko' || primary === 'korean' || primary === 'koreana') {
 			language = 'Korean';
+		} else if (primary === 'th' || primary === 'thai') {
+			language = 'Thai';
 		} else {
 			language = 'English';
 		}
@@ -500,7 +519,7 @@ function updateSubtitleLanguage() {
 	window.selectedLanguage = language;
 	textbox.lang = subtitleLocales[language];
 	const clip = currentTracks.at(-1);
-	if (dialogBox && clip) textbox.textContent = clip.dialog[language][clip.index];
+	if (dialogBox && clip) textbox.textContent = getSubtitleText(clip.dialog, language, clip.index);
 }
 
 function init() {
